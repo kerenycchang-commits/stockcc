@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  min-height: 100vh;
+}
+
+@layer components {
+  .card {
+    @apply bg-secondary rounded-xl p-4 shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white px-4 py-2 rounded-lg font-medium 
+           hover:bg-opacity-90 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary text-text-primary px-4 py-2 rounded-lg font-medium
+           border border-gray-700 hover:border-accent transition-all duration-200;
+  }
+
+  .input-field {
+    @apply bg-primary border border-gray-700 rounded-lg px-3 py-2 
+           text-text-primary focus:border-accent focus:outline-none;
+  }
+}
+
+@keyframes flash-green {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: rgba(0, 217, 165, 0.3); }
+}
+
+@keyframes flash-red {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: rgba(233, 69, 96, 0.3); }
+}
+
+.flash-up {
+  animation: flash-green 0.5s ease;
+}
+
+.flash-down {
+  animation: flash-red 0.5s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a5a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a6a;
+}

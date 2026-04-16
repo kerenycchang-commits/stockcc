@@ -1,0 +1,10 @@
+{
+  "name": "taiwan-stock-scanner-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "fastapi dev server/main.py",
+    "start": "uvicorn server.main:app --host 0.0.0.0 --port 4000",
+    "build": "pip install -r requirements.txt"
+  }
+}
